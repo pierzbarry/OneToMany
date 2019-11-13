@@ -76,14 +76,18 @@ public class Main {
         int userId = keyboard.nextInt();
         keyboard.nextLine();
 
+        // setting object to null so IDE doesn't complain about return
         Person myPerson = null;
 
+        // find the person they entered and REMEMBER IT (to actual person object)
         for (Person person : personDB) {
             if(person.getId() == userId) {
                 myPerson = person;
             }
         }
 
+        // assuming we found it and remembered it
+        // replace said name with user input
         if(myPerson != null) {
             System.out.print("Please enter a new Name: ");
             String userStr = keyboard.nextLine();
